@@ -1,0 +1,68 @@
+// Layout core
+hgroup {@extend %wrapper;}
+
+nav { > div, > ul {@extend %wrapper;}
+	.toggle-menu {width: 100%; padding: 0; text-align: center; display: none;}
+	@include breakpoint(medium-size) {
+		ul {display: none;
+			&.show {display: block;
+				li {float: none; a {text-align: center;}}
+			}
+		}
+		.toggle-menu {display: block;}
+	}
+}
+
+// Whole section
+.main-container, .sponsors, .how {
+	> div {@extend %wrapper;}
+}
+
+// Content box for two columns
+.narrow-content {@include col(600px, 20px, left);}
+aside {@include col(300px, 20px, right);}
+
+// Content box for full width
+.content {
+	width: 100%;
+	ul {@extend %clearlist; overflow: hidden; margin-bottom: $spacing-fourty;}
+	li {margin-bottom: 20px;}
+	p {margin: 20px;}
+}
+
+.image-box {img {@extend %fleximage;}
+	float: left; margin: 0 $spacing-twenty 0 0;
+	&.on-right {float: right; margin: 0 0 0 $spacing-twenty;}
+	@include breakpoint(medium-size) {float: none !important; margin: 0 auto $spacing-twenty !important;}
+}
+
+.boxes-three {
+	@include boxes(3);
+	&.custom-left {
+		@include customBoxes(200px, left);
+	}
+	&.custom-right {
+		@include customBoxes(200px, right);
+	}
+}
+
+.boxes-four {
+	@include boxes(4);
+	&.custom-left {
+		@include customBoxes(100px, left, 4);
+	}
+	&.custom-right {
+		@include customBoxes(200px, right, 4);
+	}
+}
+
+// Footer
+footer {
+	> div {@extend %wrapper;}
+	@include breakpoint(large-size) {
+		clear: both;
+	}
+}
+
+@include sticky-footer(250px);
+

@@ -1,0 +1,75 @@
+// Header
+header { //@include retina-image("bg_header", "png", 200px 200px, repeat); 
+	color: #fff;
+	background: $color-blue;
+	text-align: center;
+	padding-bottom: 130px;
+	@include text-shadow(rgba(0, 0, 0, 0.7) 0 1px 1px);
+	> div {@extend %wrapper; position: relative;}
+	h1 {font-size: emCalc(30px); padding: 20px 0; text-align: left;}
+	nav{position: absolute; top: 20px; right: 0;
+		a {@include btn(dark);}
+	}
+	p {margin: emCalc(20px, 22px) 0; font-size: $h4-font-size; line-height: emCalc(32px, 22px);}
+	.btn-start {@include btn(dark) {font-size: $h4-font-size; padding: 15px 40px; margin-bottom: $spacing-fourty;};}
+}
+
+// Video section
+.video {
+	> div {max-width: 980px; border: solid 10px #fff; margin: -130px auto $spacing-fourty;}
+}
+
+.sponsors, .how {text-align: center; padding: $spacing-fourty 0; 
+	p.subtext {@include opacity(0.7); font-size: $h5-font-size;}
+	.btn-start {@include btn(light) {font-size: $h4-font-size; padding: 15px 40px; margin-top: $spacing-fourty;};}
+}
+
+// Sponsors section
+.sponsors {background: $color-grey-light;
+	ul {@extend %clearlist;}
+	li {@include border-radius($default-radius); max-height: 220px; overflow: hidden;
+		&:hover {@include opacity(0.6);}
+	}
+}
+
+.how {
+	ul {width: 960px;}
+	li {@include border-radius($default-radius); overflow: hidden; background: $color-grey-light; height: 320px;
+		p {margin: 0 10px 20px 20px;text-align: left; font-size: $p-font-size; line-height: emCalc(24px); position: relative; padding-left:emCalc(35px);
+			span {@include border-radius(50%); width: emCalc(25px); line-height: emCalc(25px); display: inline-block; position: absolute; top: 0; left: 0; background: #fff; text-align: center; font-weight: 600;}
+		}	
+	}
+	.iconbox {
+		@include border-radius(50%);
+		width: 150px;
+		height: 150px;
+		background: #a4bbd3;
+		text-align: center;
+		margin: $spacing-thirty auto;
+	}
+	.search {
+		@include icon("icon-search", "after") {
+			@include text-shadow(rgba(0, 0, 0, 0.8) 0 1px 1px); color: #fff; font-size: emCalc(80px); line-height: 150px;
+		};
+	}
+	.eye {
+		@include icon("icon-eye", "after") {
+			@include text-shadow(rgba(0, 0, 0, 0.8) 0 1px 1px); color: #fff; font-size: emCalc(80px); line-height: 150px;
+		};
+	}
+	.check {
+		@include icon("icon-checkmark", "after") {
+			@include text-shadow(rgba(0, 0, 0, 0.8) 0 1px 1px); color: #fff; font-size: emCalc(80px); line-height: 150px;
+		};
+	}
+}
+
+#footer {
+	margin-top: 250px;
+	background: $color-grey;
+	> div {@extend %wrapper; overflow: hidden;}
+	.box {width: 48%; margin-left: 2%; min-height: 200px; margin-top: $spacing-thirty; float: left; background: rgba(255, 255, 255, 0.4);
+		&:first-child {margin-left: 0;}
+	}
+}
+

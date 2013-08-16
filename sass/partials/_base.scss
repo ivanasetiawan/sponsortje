@@ -1,0 +1,24 @@
+// Base styling
+
+// Compass imports & mixins
+@import "compass";
+@import "blueprint/grid";
+@import "compass/layout/sticky-footer";
+
+body {
+	font-size: $base-font-size;
+	font-weight: 300;
+	margin: 0;
+	color: #333;
+	font-family: $font-content;
+}
+
+h1, h2, h3, p {margin: 0;}
+
+h1, h2, h3, h4 {font-weight: 700;}
+h1 {font-size: $h1-font-size;}
+h2 {font-size: $h2-font-size;}
+
+a {text-decoration: none;}
+
+p, h1 {margin: 0 0 $spacing-thirty;}

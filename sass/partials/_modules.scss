@@ -1,0 +1,25 @@
+// Reuseable chunks
+%clearlist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+%wrapper {
+	max-width: $width-basic;
+	margin: 0 auto;
+}
+
+%fleximage {
+	width: 100%;
+	height: auto;
+}
+
+%btn {
+	display: inline-block;
+	padding: 10px 15px;
+	font-weight: 600;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #fff;
+}
